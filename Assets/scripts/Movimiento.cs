@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Movimiento : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float moveSpeed = 5f;
 
-    // Update is called once per frame
+    
+    private float[] positions = { -3f, 0f, 3f };
+
+    private int currentPosition = 1; 
+
     void Update()
     {
-        
+         if (Input.GetKeyDown(KeyCode.RightArrow)){
+            transform.Translate(3f,0,0);
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow)){
+            transform.Translate(-3f,0,0);
+        }
+
     }
 }
